@@ -26,3 +26,7 @@ test("renders App", () => {
   );
   expect(baseElement).toBeDefined();
 });
+
+test("will not pass",()=> {
+  expect(2+1).toEqual(4);
+})
