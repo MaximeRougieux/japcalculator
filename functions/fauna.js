@@ -3,10 +3,10 @@ const faunadb = require("faunadb"); /* Import faunaDB sdk */
 /* configure faunaDB Client with our secret */
 const q = faunadb.query;
 const client = new faunadb.Client({
-  secret: process.env.FAUNADB_SERVER_SECRET,
+  secret: process.env.FAUNADB_SECRET,
 });
 
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
   const data = JSON.parse(event.body);
   console.log("Function `todo-create` invoked", data);
   const todoItem = {
